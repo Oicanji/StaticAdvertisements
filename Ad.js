@@ -18,7 +18,7 @@ const IMAGES = [
 ]
 $(document).ready(function(){
     var obj = jQuery(".ad");
-    adObjets(obj);
+    //adObjets(obj);
 });
 
 function adObjets(list){
@@ -51,20 +51,20 @@ function imagesRes(){
     i = 0
     while (i <= IMAGES.length-1) {
         var r
-        if(IMAGES[i].length = 1){
+        if(IMAGES[i].length == 1){
             r = URL+IMAGES[i][0]
         }else{
             //else de promo has animation
             r = []
             ii = 0
-            while (ii <= IMAGES[i]-1) {
+            while (ii <= IMAGES[i].length-1) {
                 r[ii] = URL+IMAGES[i][ii]
+                ii++;
             }
-            console.log(r)
         }
-        console.log(r)
         images[i] = r
         i++;
     }
+    console.log(images)
 }
 imagesRes()
